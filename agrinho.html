@@ -1,0 +1,626 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Agro Forte • Futuro Sustentável</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#eef7ee;
+color:#222;
+}
+
+header{
+
+height:85vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+background:
+
+linear-gradient(
+rgba(20,70,20,.5),
+rgba(20,90,20,.7)
+),
+
+url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
+
+background-size:cover;
+background-position:center;
+
+}
+
+header h1{
+font-size:4rem;
+}
+
+header p{
+margin-top:20px;
+max-width:800px;
+font-size:1.2rem;
+}
+
+nav{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+padding:18px;
+
+background:#1b5e20;
+
+position:sticky;
+
+top:0;
+
+}
+
+nav button{
+
+border:none;
+
+padding:14px 20px;
+
+border-radius:30px;
+
+background:transparent;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+nav button:hover{
+
+background:#43a047;
+
+}
+
+.aba{
+
+display:none;
+
+padding:50px 10%;
+
+}
+
+.ativa{
+
+display:block;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:
+0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.hero{
+
+width:100%;
+
+height:340px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+margin-bottom:25px;
+
+}
+
+h2{
+
+color:#2e7d32;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+line-height:1.9;
+
+}
+
+.pesquisa{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+}
+
+input{
+
+flex:1;
+
+padding:16px;
+
+border:none;
+
+border-radius:12px;
+
+}
+
+.btn{
+
+padding:16px 28px;
+
+border:none;
+
+border-radius:40px;
+
+background:#43a047;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+#resultado{
+
+display:none;
+
+margin-top:20px;
+
+padding:25px;
+
+background:#f4fff4;
+
+border-radius:18px;
+
+}
+
+#google{
+
+margin-top:20px;
+
+display:none;
+
+}
+
+#google a{
+
+display:inline-block;
+
+padding:14px 22px;
+
+background:#2e7d32;
+
+color:white;
+
+border-radius:30px;
+
+text-decoration:none;
+
+}
+
+footer{
+
+margin-top:50px;
+
+padding:25px;
+
+text-align:center;
+
+background:#2e7d32;
+
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌱 Agro Forte</h1>
+
+<p>
+
+Tecnologia, meio ambiente e produção unidos para um futuro sustentável.
+
+</p>
+
+</header>
+
+<nav>
+
+<button onclick="abrir('inicio')">
+Início
+</button>
+
+<button onclick="abrir('ambiente')">
+Meio Ambiente
+</button>
+
+<button onclick="abrir('producao')">
+Produção
+</button>
+
+<button onclick="abrir('comparacao')">
+Diferenças
+</button>
+
+<button onclick="abrir('pesquisa')">
+Pesquisa
+</button>
+
+</nav>
+
+<section
+id="inicio"
+class="aba ativa">
+
+<div class="card">
+
+<img
+class="hero"
+src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+
+<h2>
+Bem-vindo
+</h2>
+
+<p>
+
+Produzir com responsabilidade ambiental significa unir inovação,
+tecnologia e preservação.
+
+</p>
+
+</div>
+
+</section>
+
+<section
+id="ambiente"
+class="aba">
+
+<div class="card">
+
+<img
+class="hero"
+src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+
+<h2>
+🌳 Meio Ambiente
+</h2>
+
+<p>
+
+O meio ambiente fornece recursos naturais que sustentam toda produção agrícola.
+
+</p>
+
+</div>
+
+</section>
+
+<section
+id="producao"
+class="aba">
+
+<div class="card">
+
+<img
+class="hero"
+src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854">
+
+<h2>
+🚜 Produção Agrícola
+</h2>
+
+<p>
+
+Produção agrícola envolve solo, irrigação, tecnologia e gestão.
+
+</p>
+
+</div>
+
+</section>
+
+<section
+id="comparacao"
+class="aba">
+
+<div class="card">
+
+<img
+class="hero"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0XJzlL6bAB0ZGXoJiRm0U1fXEe-ptjbT69cz5i9XaOA&s=10">
+
+<h2>
+
+⚖️ Produção × Meio Ambiente
+
+</h2>
+
+<p>
+
+Sistema de Produção (Ação Humana)
+Objetivo: Geração de valor, lucro, alimentos e bens.Exemplos: Indústria, agropecuária, mineração e construção civil.Impacto no Meio Ambiente: Depende da extração de matérias-primas e da energia. Sistemas tradicionais operam de forma linear (extraem, produzem e descartam), gerando poluição, esgotamento do solo, desmatamento e emissão de gases de efeito estufa.
+
+<br><br>
+
+Meio Ambiente
+O que é? Meio ambiente é o conjunto de elementos físicos, químicos e biológicos que criam e mantêm a vida na Terra.Foco: Equilíbrio ecológico, biodiversidade e suporte à vida.O Problema: A capacidade da natureza de absorver poluentes e repor recursos está sendo ultrapassada, resultando em esgotamento hídrico, desmatamento e mudanças climáticas.
+
+<br><br>
+
+ Os Impactos da Produção no Meio Ambiente o modelo de produção tradicional, baseado na lógica linear (extrair, produzir, descartar), gera sérios desequilíbrios ecológicos, tais como:Exaustão de recursos: Uso acelerado de água, solo fértil e minerais em taxas superiores à capacidade de regeneração da Terra.Poluição: Emissão de gases de efeito estufa (que causam mudanças climáticas), contaminação de rios e poluição do solo por agrotóxicos e resíduos industriais.Perda de biodiversidade: O desmatamento e a expansão agrícola destroem habitats naturais.
+
+</p>
+
+</div>
+
+</section>
+
+<section
+id="pesquisa"
+class="aba">
+
+<div class="card">
+
+<h2>
+
+🔍 Pesquisas
+
+</h2>
+
+<div class="pesquisa">
+
+<input
+id="pergunta"
+placeholder="Ex: Como preservar o solo?">
+
+<button
+class="btn"
+onclick="pesquisar()">
+
+Pesquisar
+
+</button>
+
+</div>
+
+<div id="resultado"></div>
+
+<div id="google">
+
+<a
+id="linkGoogle"
+target="_blank">
+
+Pesquisar mais no Google
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+Agro Forte • Futuro Sustentável
+
+</footer>
+
+<script>
+
+function abrir(id){
+
+document
+.querySelectorAll(".aba")
+
+.forEach(
+x=>x.classList.remove("ativa")
+);
+
+document
+.getElementById(id)
+
+.classList.add("ativa");
+
+}
+
+const base=[
+
+{
+
+palavras:[
+"solo"
+],
+
+texto:
+
+"🟫 O solo é responsável pela sustentação das plantas e armazenamento de nutrientes.",
+
+busca:
+"como preservar o solo agricultura"
+
+},
+
+{
+
+palavras:[
+"água",
+"irrigação"
+],
+
+texto:
+
+"💧 Sistemas eficientes economizam água e aumentam produtividade.",
+
+busca:
+"uso da água na agricultura"
+
+},
+
+{
+
+palavras:[
+"meio ambiente"
+],
+
+texto:
+
+"🌳 Preservar recursos naturais mantém equilíbrio ecológico e produção futura.",
+
+busca:
+"meio ambiente agricultura"
+
+},
+
+{
+
+palavras:[
+"produção"
+],
+
+texto:
+
+"🚜 Produção agrícola envolve tecnologia, planejamento e sustentabilidade.",
+
+busca:
+"produção agrícola sustentável"
+
+}
+
+];
+
+function pesquisar(){
+
+let texto=
+
+document
+.getElementById(
+"pergunta"
+)
+
+.value
+
+.toLowerCase();
+
+let r=
+
+document
+.getElementById(
+"resultado"
+);
+
+let g=
+
+document
+.getElementById(
+"google"
+);
+
+let link=
+
+document
+.getElementById(
+"linkGoogle"
+);
+
+r.style.display="block";
+
+g.style.display="block";
+
+for(let item of base){
+
+for(let p of item.palavras){
+
+if(
+texto.includes(p)
+){
+
+r.innerHTML=
+item.texto;
+
+link.href=
+
+"https://www.google.com/search?q="+
+
+encodeURIComponent(
+item.busca
+);
+
+return;
+
+}
+
+}
+
+}
+
+r.innerHTML=
+
+"Não encontrei resposta específica. Continue pesquisando abaixo.";
+
+link.href=
+
+"https://www.google.com/search?q="+
+
+encodeURIComponent(
+texto+
+""
+);
+
+}
+
+</script>
+
+</body>
+
+</html>
+```
